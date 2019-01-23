@@ -3,7 +3,8 @@ const colours = {
   lightGrey: '#edecec',
   midGrey: '#d4d4d4',
   darkGrey: '#3b4757',
-  darkestGrey: '#333e4b',
+  darkerGrey: '#333e4b',
+  darkestGrey: '#1f242b',
   lightBlue: '#16c1e3',
   blue: '#0969e8',
 }

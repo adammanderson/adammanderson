@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
-import walrus from '../../images/walrus.svg'
+import Walrus from './Walrus'
 
 import {
   HeaderWrapper,
@@ -14,7 +14,7 @@ const Header = () => (
   <HeaderWrapper>
     <Brand>
       <Logo>
-        <img src={walrus} alt="logo" />
+        <Walrus />
       </Logo>
       Adam.
     </Brand>

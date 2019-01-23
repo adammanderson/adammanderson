@@ -12,6 +12,7 @@ export const Brand = styled.div`
   position: relative;
   flex: 1;
   padding: 0.25em 0 0.2em 60px;
+  color: ${props => props.theme.heading};
   font-weight: ${props => props.theme.fontWeightBold};
   font-size: 1.4em;
 `

@@ -9,14 +9,16 @@ export const lightTheme = {
   background: colours.white,
   buttonBackground: colours.blue,
   buttonText: colours.white,
+  logo: colours.darkGrey,
 }
 
 export const darkTheme = {
   ...fonts,
-  placeholder: colours.darkestGrey,
+  placeholder: colours.darkerGrey,
   body: colours.white,
   heading: colours.lightGrey,
   background: colours.darkGrey,
   buttonBackground: colours.white,
   buttonText: colours.blue,
+  logo: colours.darkestGrey,
 }
