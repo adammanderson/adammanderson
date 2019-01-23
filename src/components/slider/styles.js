@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components'
+import posed from 'react-pose'
 
 export const SliderWrapper = styled.section`
 `
@@ -21,7 +22,26 @@ export const SlideContentInner = styled.div`
   padding: 6em 4em 2em 6em;
 `
 
-export const SlideCategory = styled.span`
+const categoryAnimation = {
+  enter: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 500,
+      ease: 'easeInOut'
+    },
+  },
+  exit: {
+    y: 50,
+    opacity: 0,
+    transition: {
+      duration: 500,
+      ease: 'easeInOut'
+    },
+  },
+}
+
+export const SlideCategory = styled(posed.span(categoryAnimation))`
   position: absolute;
   left: 0.3em;
   top: 0.5em;
@@ -40,7 +60,26 @@ export const SlideImage = styled.div`
   padding: 1em 1em 1em 0;
 `
 
-export const SlideImageInner = styled.div`
+const imageAnimation = {
+  enter: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 800,
+      ease: 'easeInOut',
+    },
+  },
+  exit: {
+    x: 50,
+    opacity: 0,
+    transition: {
+      duration: 800,
+      ease: 'easeInOut',
+    },
+  },
+}
+
+export const SlideImageInner = styled(posed.div(imageAnimation))`
   position: relative;
   flex: 1;
   background-color: ${props => props.theme.placeholder};
@@ -55,6 +94,7 @@ export const UpNext = styled.div`
   bottom: 0;
   padding: 1em 4em 2em 6em;
   font-weight: ${props => props.theme.fontWeightBold};
+  color: ${props => props.theme.heading}
 `
 
 const progressWidth = keyframes`
@@ -71,7 +111,7 @@ export const UpNextProgress = styled.div`
     content: '';
     position: absolute;
     height: 3px;
-    background: ${props => props.theme.buttonBackground};
-    animation: ${progressWidth} 3s 1s cubic-bezier(0.77, 0, 0.175, 1);
+    background: ${props => props.theme.progress};
+    animation: ${progressWidth} ${props => (props.delay ? `${props.delay}ms` : '3s')} 0s cubic-bezier(0.77, 0, 0.175, 1);
   }
 `

@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { ArrowRight } from 'react-feather'
+import { PoseGroup } from 'react-pose'
 
 import { H1, P } from '../typography'
 import Button from '../Button'
-
 import {
   SliderWrapper,
   Slide,
@@ -17,43 +17,69 @@ import {
   UpNextProgress,
 } from './styles'
 
+const SLIDER_DELAY = 5000
+
 export default class Slider extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      activeSlide: 1,
+      activeSlideIndex: 0,
     }
   }
 
-  render() {
-    const { activeSlide } = this.state
+  componentDidMount() {
+    setInterval(() => {
+      this.handleNextSlide()
+    }, SLIDER_DELAY)
+  }
+
+  handleNextSlide = () => {
     const { slides } = this.props
-    const nextSlide = activeSlide + 1 === slides.length ? slides[0] : slides[activeSlide + 1]
+    this.setState(state => ({
+      activeSlideIndex: state.activeSlideIndex + 1 === slides.length ? 0 : state.activeSlideIndex + 1
+    }))
+  }
+
+  render() {
+    const { activeSlideIndex } = this.state
+    const { slides } = this.props
+    const activeSlide = slides[activeSlideIndex]
+    const nextSlide = activeSlideIndex + 1 === slides.length ? slides[0] : slides[activeSlideIndex + 1]
 
     return (
       <SliderWrapper>
-        { slides.map(slide => (
-          <Slide key={slide.title}>
-            <SlideContent>
-              <SlideContentInner>
-                <SlideCategory>{slide.category}</SlideCategory>
-                <H1>{slide.title}</H1>
-                <P>{slide.excerpt}</P>
-                <Button href={slide.slug}>
-                  Read
-                  <ArrowRight size={19} />
-                </Button>
-              </SlideContentInner>
-              <UpNext>
-                Next: {nextSlide.title}
-                <UpNextProgress />
-              </UpNext>
-            </SlideContent>
-            <SlideImage>
-              <SlideImageInner image={slide.image} />
-            </SlideImage>
-          </Slide>
-        ))}
+        <Slide>
+          <SlideContent>
+            <SlideContentInner>
+              <PoseGroup>
+                <SlideCategory
+                  key={activeSlideIndex}
+                  onPoseComplete={this.posecomplete}
+                >
+                  {activeSlide.category}
+                </SlideCategory>
+              </PoseGroup>
+              <H1>{activeSlide.title}</H1>
+              <P>{activeSlide.excerpt}</P>
+              <Button href={activeSlide.slug}>
+                Read
+                <ArrowRight size={19} />
+              </Button>
+            </SlideContentInner>
+            <UpNext>
+              Next: {nextSlide.title}
+              <UpNextProgress key={activeSlideIndex} delay={SLIDER_DELAY} />
+            </UpNext>
+          </SlideContent>
+          <SlideImage>
+            <PoseGroup>
+              <SlideImageInner
+                key={activeSlideIndex}
+                image={activeSlide.image}
+              />
+            </PoseGroup>
+          </SlideImage>
+        </Slide>
       </SliderWrapper>
     )
   }

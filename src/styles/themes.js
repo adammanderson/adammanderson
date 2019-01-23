@@ -10,6 +10,7 @@ export const lightTheme = {
   buttonBackground: colours.blue,
   buttonText: colours.white,
   logo: colours.darkGrey,
+  progress: colours.blue,
 }
 
 export const darkTheme = {
@@ -21,4 +22,5 @@ export const darkTheme = {
   buttonBackground: colours.white,
   buttonText: colours.blue,
   logo: colours.darkestGrey,
+  progress: colours.lightBlue,
 }
