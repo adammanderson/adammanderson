@@ -1,7 +1,8 @@
-font-family: upgrade-lights,sans-serif;
-font-weight: 500;
-font-style: normal;
+const fonts = {
+  sansSerif: 'franklin-gothic-urw, sans-serif',
+  serif: 'benton-modern-display, serif',
+  fontWeightBold: 700,
+  fontWeightRegular: 400,
+}
 
-font-family: upgrade,sans-serif;
-font-weight: 600;
-font-style: normal;
+export default fonts

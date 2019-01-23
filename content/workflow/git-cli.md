@@ -2,8 +2,9 @@
 title: Git CLI basics
 description: This post is related to the gatsbyjs
 date: '2018-09-26'
-image: ''
+image: 'https://images.unsplash.com/photo-1527195612250-460488c1ad32?ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80'
 category: 'workflow'
+featured: true
 ---
 Don't build a website with last decade's tech. The future of the web is mobile,
  JavaScript and APIs—the

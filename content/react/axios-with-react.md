@@ -1,9 +1,10 @@
 ---
 title: "Axios with React"
 description: This post is related to the gatsbyjs
-date: '2018-09-26'
-image: ''
-category: 'react'
+date: '2019-09-26'
+image: 'https://images.unsplash.com/photo-1501004318641-b39e6451bec6?ixlib=rb-1.2.1&auto=format&fit=crop&w=2766&q=80'
+category: react
+featured: true
 ---
 Don't build a website with last decade's tech. The future of the web is mobile,
  JavaScript and APIs—the

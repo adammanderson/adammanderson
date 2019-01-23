@@ -4,12 +4,12 @@ import Helmet from 'react-helmet'
 import { ThemeProvider } from 'styled-components'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-import GlobalStyles from '../styles/global-styles'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import { lightTheme, darkTheme, GlobalStyles } from '../styles'
+import Header from '../components/header'
+import Footer from '../components/footer'
 
 const Layout = ({ children }) => (
-  <ThemeProvider theme={{}}>
+  <ThemeProvider theme={lightTheme}>
     <Fragment>
       <GlobalStyles />
       <Helmet>

@@ -2,13 +2,14 @@ import React from 'react'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
 
-import Nav from './Nav'
+import { HeaderWrapper } from './styles'
+import Nav from '../Nav'
 
 const Header = () => (
-  <div>
+  <HeaderWrapper>
     Header
     <Nav />
-  </div>
+  </HeaderWrapper>
 )
 
 export default Header

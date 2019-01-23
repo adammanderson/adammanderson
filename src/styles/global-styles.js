@@ -7,9 +7,10 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    font-family: franklin-gothic-urw, sans-serif;
+    font-family: ${props => props.theme.sansSerif};
     font-size: 18px;
-    line-height: 1.6em;
+    line-height: 1.4em;
+    background: ${props => props.theme.background};
   }
 `
 
