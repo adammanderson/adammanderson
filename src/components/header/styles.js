@@ -4,8 +4,9 @@ export const HeaderWrapper = styled.section`
   display: flex;
   position: fixed;
   width: 50vw;
-  padding: 2em 1em 1em 2em;
+  padding: 2em 1em 2em 2em;
   z-index: 10;
+  background: ${props => props.theme.background}
 `
 
 export const Brand = styled.div`
@@ -14,7 +15,8 @@ export const Brand = styled.div`
   padding: 0.25em 0 0.2em 60px;
   color: ${props => props.theme.heading};
   font-weight: ${props => props.theme.fontWeightBold};
-  font-size: 1.4em;
+  font-size: 1.6em;
+  font-family: ${props => props.theme.serif}
 `
 
 export const Logo = styled.div`

@@ -4,7 +4,11 @@ import Helmet from 'react-helmet'
 import { ThemeProvider } from 'styled-components'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-import { lightTheme, darkTheme, GlobalStyles } from '../styles'
+import {
+  lightTheme,
+  darkTheme,
+  GlobalStyles,
+} from '../styles'
 import Header from '../components/header'
 import Footer from '../components/footer'
 

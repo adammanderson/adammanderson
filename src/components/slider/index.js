@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { ArrowRight } from 'react-feather'
+import { ArrowRight, ArrowLeft } from 'react-feather'
 
 import { H1, P } from '../typography'
 import Button from '../Button'
@@ -13,24 +13,27 @@ import {
   SlideImage,
   SlideImageInner,
   SlideCategory,
+  UpNext,
+  UpNextProgress,
 } from './styles'
 
 export default class Slider extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      activeSlide: 0,
+      activeSlide: 1,
     }
   }
 
   render() {
     const { activeSlide } = this.state
     const { slides } = this.props
-    console.log(slides)
+    const nextSlide = activeSlide + 1 === slides.length ? slides[0] : slides[activeSlide + 1]
+
     return (
       <SliderWrapper>
-        { slides.map((slide, index) => (
-          <Slide key={index}>
+        { slides.map(slide => (
+          <Slide key={slide.title}>
             <SlideContent>
               <SlideContentInner>
                 <SlideCategory>{slide.category}</SlideCategory>
@@ -41,6 +44,10 @@ export default class Slider extends Component {
                   <ArrowRight size={19} />
                 </Button>
               </SlideContentInner>
+              <UpNext>
+                Next: {nextSlide.title}
+                <UpNextProgress />
+              </UpNext>
             </SlideContent>
             <SlideImage>
               <SlideImageInner image={slide.image} />

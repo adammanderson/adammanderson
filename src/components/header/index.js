@@ -16,7 +16,7 @@ const Header = () => (
       <Logo>
         <Walrus />
       </Logo>
-      Adam.
+      adam.
     </Brand>
     <Nav />
   </HeaderWrapper>

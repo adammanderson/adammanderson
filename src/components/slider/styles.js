@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
 export const SliderWrapper = styled.section`
 `
@@ -9,6 +9,7 @@ export const Slide = styled.div`
 `
 
 export const SlideContent = styled.div`
+  position: relative;
   flex: 0 0 50%;
   display: flex;
   align-items: center;
@@ -17,13 +18,13 @@ export const SlideContent = styled.div`
 
 export const SlideContentInner = styled.div`
   position: relative;
-  padding: 2em 3em 2em 7em;
+  padding: 6em 4em 2em 6em;
 `
 
 export const SlideCategory = styled.span`
   position: absolute;
-  left: 0.4em;
-  top: 0.12em;
+  left: 0.3em;
+  top: 0.5em;
   z-index: -1;
   color: ${props => props.theme.placeholder};
   font-family: ${props => props.theme.serif};
@@ -40,10 +41,37 @@ export const SlideImage = styled.div`
 `
 
 export const SlideImageInner = styled.div`
+  position: relative;
   flex: 1;
   background-color: ${props => props.theme.placeholder};
   background-image: url(${props => props.image});
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+`
+
+export const UpNext = styled.div`
+  position: absolute;
+  bottom: 0;
+  padding: 1em 4em 2em 6em;
+  font-weight: ${props => props.theme.fontWeightBold};
+`
+
+const progressWidth = keyframes`
+  0% { width: 0; }
+  100% { width: 100%; }
+`
+
+export const UpNextProgress = styled.div`
+  position: relative;
+  margin-top: 3px;
+  height: 3px;
+  background: ${props => props.theme.placeholder};
+  &:after {
+    content: '';
+    position: absolute;
+    height: 3px;
+    background: ${props => props.theme.buttonBackground};
+    animation: ${progressWidth} 3s 1s cubic-bezier(0.77, 0, 0.175, 1);
+  }
 `
