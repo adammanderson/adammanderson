@@ -1,9 +1,10 @@
 ---
-title: "Styled Components"
+title: Awesome Interfaces with Styled Components
 description: This post is related to the gatsbyjs
 date: '2019-09-26'
-image: ''
-category: 'react'
+image: 'https://images.unsplash.com/photo-1500462918059-b1a0cb512f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2734&q=80'
+category: 'style'
+featured: true
 ---
 Don't build a website with last decade's tech. The future of the web is mobile,
  JavaScript and APIs—the

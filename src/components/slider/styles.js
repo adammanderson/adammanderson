@@ -17,7 +17,7 @@ export const SlideContent = styled.div`
 
 export const SlideContentInner = styled.div`
   position: relative;
-  padding: 2em 4em 2em 8em;
+  padding: 2em 3em 2em 7em;
 `
 
 export const SlideCategory = styled.span`
