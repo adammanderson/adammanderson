@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import { ArrowRight, ArrowLeft } from 'react-feather'
+import { ArrowRight } from 'react-feather'
 
 import { H1, P } from '../typography'
 import Button from '../Button'
