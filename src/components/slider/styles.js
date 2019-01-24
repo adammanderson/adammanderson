@@ -1,63 +1,105 @@
 import styled, { keyframes } from 'styled-components'
 import posed from 'react-pose'
+import media from '../../styles/media'
 
 export const SliderWrapper = styled.section`
 `
 
 export const Slide = styled.div`
   display: flex;
+  flex-flow: column wrap;
   min-height: 100vh;
+  ${media.tablet`
+    flex-flow: row wrap;
+  `}
 `
 
 export const SlideContent = styled.div`
   position: relative;
+  order: 1;
   flex: 0 0 50%;
   display: flex;
   align-items: center;
   z-index: 1;
+  ${media.tablet`
+    order: 0;
+  `}
 `
 
-export const SlideContentInner = styled.div`
+const slideContentAnimation = {
+  enter: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 500,
+      ease: 'easeInOut',
+    },
+  },
+  exit: {
+    x: -50,
+    opacity: 0,
+    transition: {
+      duration: 500,
+      ease: 'easeInOut',
+    },
+  },
+}
+
+export const SlideContentInner = styled(posed.div(slideContentAnimation))`
   position: relative;
-  padding: 6em 4em 2em 6em;
+  padding: 0.5em 1em 4em 1em;
+  ${media.tablet`
+    padding: 6em 4em 2em 6em;
+  `}
 `
 
 const categoryAnimation = {
   enter: {
     y: 0,
-    opacity: 1,
+    opacity: 0.8,
     transition: {
-      duration: 500,
-      ease: 'easeInOut'
+      duration: 1000,
+      ease: 'easeInOut',
     },
   },
   exit: {
     y: 50,
     opacity: 0,
     transition: {
-      duration: 500,
-      ease: 'easeInOut'
+      duration: 1000,
+      ease: 'easeInOut',
     },
   },
 }
 
 export const SlideCategory = styled(posed.span(categoryAnimation))`
   position: absolute;
-  left: 0.3em;
-  top: 0.5em;
+  left: 0.1em;
+  top: -0.2em;
   z-index: -1;
   color: ${props => props.theme.placeholder};
   font-family: ${props => props.theme.serif};
   font-weight: ${props => props.theme.fontWeightBold};
-  font-size: 10em;
+  font-size: 8em;
   user-select: none;
+  ${media.tablet`
+    left: 0.3em;
+    top: 0.5em;
+    font-size: 10em;
+  `}
 `
 
 export const SlideImage = styled.div`
-  flex: 0 0 50%;
+  order: 0;
+  flex: 1 0 30%;
   display: flex;
   flex-flow: column wrap;
-  padding: 1em 1em 1em 0;
+  padding: 0.5em;
+  ${media.tablet`
+    order: 1;
+    flex: 0 0 50%;
+    padding: 1em 1em 1em 0;
+  `}
 `
 
 const imageAnimation = {
@@ -92,9 +134,19 @@ export const SlideImageInner = styled(posed.div(imageAnimation))`
 export const UpNext = styled.div`
   position: absolute;
   bottom: 0;
-  padding: 1em 4em 2em 6em;
+  padding: 1em;
+  font-size: 16px;
   font-weight: ${props => props.theme.fontWeightBold};
-  color: ${props => props.theme.heading}
+  color: ${props => props.theme.heading};
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+  ${media.tablet`
+    padding: 1em 4em 2em 6em;
+    width: auto;
+    font-size: 18px;
+  `}
 `
 
 const progressWidth = keyframes`

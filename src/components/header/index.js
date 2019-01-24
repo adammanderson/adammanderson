@@ -10,16 +10,18 @@ import {
 } from './styles'
 import Nav from './Nav'
 
-const Header = () => (
-  <HeaderWrapper>
-    <Brand>
-      <Logo>
-        <Walrus />
-      </Logo>
-      adam.
-    </Brand>
-    <Nav />
-  </HeaderWrapper>
-)
+const Header = () => {
+  return (
+    <HeaderWrapper>
+      <Brand>
+        <Logo>
+          <Walrus />
+        </Logo>
+        adam.
+      </Brand>
+      <Nav />
+    </HeaderWrapper>
+  )
+}
 
 export default Header

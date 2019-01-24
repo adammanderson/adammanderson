@@ -50,22 +50,24 @@ export default class Slider extends Component {
       <SliderWrapper>
         <Slide>
           <SlideContent>
-            <SlideContentInner>
-              <PoseGroup>
-                <SlideCategory
-                  key={activeSlideIndex}
-                  onPoseComplete={this.posecomplete}
-                >
-                  {activeSlide.category}
-                </SlideCategory>
-              </PoseGroup>
-              <H1>{activeSlide.title}</H1>
-              <P>{activeSlide.excerpt}</P>
-              <Button href={activeSlide.slug}>
-                Read
-                <ArrowRight size={19} />
-              </Button>
-            </SlideContentInner>
+            <PoseGroup>
+              <SlideContentInner key={activeSlideIndex}>
+                <PoseGroup>
+                  <SlideCategory
+                    key={activeSlideIndex}
+                    onPoseComplete={this.posecomplete}
+                  >
+                    {activeSlide.category}
+                  </SlideCategory>
+                </PoseGroup>
+                <H1>{activeSlide.title}</H1>
+                <P>{activeSlide.excerpt}</P>
+                <Button href={activeSlide.slug}>
+                  Read
+                  <ArrowRight size={19} />
+                </Button>
+              </SlideContentInner>
+            </PoseGroup>
             <UpNext>
               Next: {nextSlide.title}
               <UpNextProgress key={activeSlideIndex} delay={SLIDER_DELAY} />

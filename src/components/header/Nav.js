@@ -1,16 +1,16 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 import { Link } from 'gatsby'
-import { User, Wind, Terminal } from 'react-feather'
+import { User, Wind, Terminal, Menu } from 'react-feather'
 
+import Drawer from '../drawer'
 import {
   NavWrapper,
-  Drawer,
-  DrawerToggler,
   NavIcon,
+  MenuButton,
 } from './styles'
 
-const Nav = () => (
-  <NavWrapper>
+const NavLinks = () => (
+  <Fragment>
     <Link to="/profile">
       <NavIcon>
         <User size={20} />
@@ -29,7 +29,42 @@ const Nav = () => (
       </NavIcon>
       Thoughts
     </Link>
-  </NavWrapper>
+  </Fragment>
 )
 
-export default Nav
+export default class Nav extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      isMobile: true,
+      isOpen: false,
+    }
+  }
+
+  handleDrawerToggle = () => {
+    console.log('close drawer')
+    this.setState(state => ({
+      isOpen: !state.isOpen,
+    }))
+  }
+
+  render() {
+    const { isMobile, isOpen } = this.state
+
+    return (
+      <NavWrapper>
+        { isMobile ? (
+          <Drawer
+            isOpen={isOpen}
+            handleDrawerClose={this.handleDrawerToggle}
+          >
+            <NavLinks />
+          </Drawer>
+        ) : (
+          <NavLinks />
+        )}
+        <MenuButton onClick={this.handleDrawerToggle}><Menu size={26} /></MenuButton>
+      </NavWrapper>
+    )
+  }
+}
