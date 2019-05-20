@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { headingBoldFont } from '../styles/fonts'
-import media from '../styles/media'
 
 export const H1 = styled.h1`
   ${headingBoldFont};
