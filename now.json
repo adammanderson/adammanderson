@@ -1,0 +1,5 @@
+{
+  "version": 2,
+  "alias": "adamanderson.co.uk",
+  "builds": [{ "src": "next.config.js", "use": "@now/next" }]
+}
