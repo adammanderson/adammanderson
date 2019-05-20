@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import { bodyRegularFont } from './fonts'
 
 const GlobalStyles = createGlobalStyle`
   * {
@@ -6,12 +7,16 @@ const GlobalStyles = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
   }
 
+  html, body {
+    margin: 0;
+    padding:0;
+  }
+
   body {
-    font-family: ${props => props.theme.sansSerif};
-    font-size: 18px;
-    line-height: 1.4em;
+    ${bodyRegularFont};
+    font-size: 17px;
+    line-height: 1.5em;
     background: ${props => props.theme.background};
-    overflow-x: hidden;
   }
 `
 

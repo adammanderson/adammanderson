@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react'
 import App, { Container } from 'next/app'
 import { ThemeProvider } from 'styled-components'
-import GlobalStyles from '../lib/components/styles/global-styles'
-import { darkTheme } from '../lib/components/styles/themes'
+import GlobalStyles from '../components/styles/global-styles'
+import { darkTheme } from '../components/styles/themes'
 
 class Adam extends App {
   static async getInitialProps({ Component, ctx }) {
