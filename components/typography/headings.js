@@ -1,16 +1,22 @@
 import styled from 'styled-components'
-import { headingBoldFont } from '../styles/fonts'
+import { regularFont, boldFont } from '../styles/fonts'
 
-export const H1 = styled.h1`
-  ${headingBoldFont};
+export const BigHeading = styled.h1`
+  ${boldFont};
   color: ${props => props.theme.heading};
-  font-size: 1.5em;
-  line-height: 0.9em;
-  margin-bottom: 0.3em;
+  font-size: 2.4em;
+  line-height: 1.2em;
+  margin-bottom: 0.6em;
 `
 
-export const H3 = styled.h1`
-  ${headingBoldFont};
+export const MediumHeading = styled.h2`
+  ${boldFont};
+  color: ${props => props.theme.heading};
+  font-size: 1.8em;
+`
+
+export const SmallHeading = styled.h3`
+  ${regularFont};
   color: ${props => props.theme.heading};
   font-size: 1.3em;
 `

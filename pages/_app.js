@@ -1,6 +1,7 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 import App, { Container } from 'next/app'
 import { ThemeProvider } from 'styled-components'
+import { Layout, LayoutContent } from '../components/layout'
 import GlobalStyles from '../components/styles/global-styles'
 import { darkTheme } from '../components/styles/themes'
 
@@ -17,10 +18,10 @@ class Adam extends App {
     return (
       <Container>
         <ThemeProvider theme={darkTheme}>
-          <Fragment>
+          <Layout>
             <GlobalStyles />
             <Component {...pageProps} />
-          </Fragment>
+          </Layout>
         </ThemeProvider>
       </Container>
     )

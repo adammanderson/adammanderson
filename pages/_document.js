@@ -30,7 +30,7 @@ export default class MyCustomDocument extends Document {
     return (
       <html lang="en">
         <Head>
-          <link rel="stylesheet" href="https://use.typekit.net/kcp3czi.css" />
+          <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         </Head>
         <body>

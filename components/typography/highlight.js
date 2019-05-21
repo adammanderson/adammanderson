@@ -1,8 +1,8 @@
 import styled from 'styled-components'
-import { bodyBoldItalicFont } from '../styles/fonts'
+import { boldItalicFont } from '../styles/fonts'
 
 export const Highlight = styled.span`
-  ${bodyBoldItalicFont};
+  ${boldItalicFont};
   color: ${({ theme }) => theme.hightlight};
   background: #ff9966;
   background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);

@@ -1,3 +1,7 @@
-export { H1, H3 } from './headings'
+export {
+  BigHeading,
+  MediumHeading,
+  SmallHeading,
+} from './headings'
 export { P } from './P'
 export { Highlight } from './highlight'
