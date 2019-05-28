@@ -5,6 +5,7 @@ import {
   BigHeading,
   P,
 } from '../components/typography'
+import Grid from '../components/grid'
 
 const IndexPage = () => (
   <Fragment>
@@ -25,6 +26,7 @@ const IndexPage = () => (
         I currently code at the Royal Opera House, Covent Garden.
       </P>
     </Cover>
+    <Grid />
   </Fragment>
 )
 

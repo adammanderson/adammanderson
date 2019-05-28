@@ -3,9 +3,13 @@ import media from '../styles/media'
 import { boldFont } from '../styles/fonts'
 
 export const HeaderWrapper = styled.section`
+  position: sticky;
+  top: 0;
   flex: 0 0 300px;
+  align-self: flex-start;
   display: flex;
   align-items: center;
+  min-height: 100vh;
 `
 
 export const HeaderInner = styled.div`
