@@ -16,12 +16,9 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     ${regularFont};
-    font-size: 15px;
+    font-size: 16px;
     line-height: 1.5em;
     background: ${props => props.theme.background};
-    ${media.tablet`
-      font-size: 16px;
-    `};
   }
 `
 
