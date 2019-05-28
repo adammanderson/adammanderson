@@ -11,7 +11,6 @@ export const NavItem = styled.a`
   position: relative;
   padding: 0.2em 0;
   color: ${({ theme }) => theme.body};
-  font-size: 0.9em;
   text-decoration: none;
   cursor: pointer;
   transition: all 300ms ease-in-out 0s;
@@ -24,7 +23,7 @@ export const NavItem = styled.a`
     top: 1em;
     width: 2em;
     border-bottom: 1px solid ${({ theme }) => theme.body};
-    transform: translateX(-180%);
+    transform: translateX(-160%);
     transition: all 300ms ease-in-out 0s;
   }
   &:hover {

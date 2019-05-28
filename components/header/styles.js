@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import media from '../styles/media'
 import { boldFont } from '../styles/fonts'
 
 export const HeaderWrapper = styled.section`
@@ -10,8 +11,11 @@ export const HeaderWrapper = styled.section`
 export const HeaderInner = styled.div`
   display: flex;
   flex-flow: column wrap;
-  min-height: 60vh;
-  padding: 0 2em;
+  padding: 1.5em;
+  ${media.tablet`
+    min-height: 60vh;
+    padding: 0 2em;
+  `};
 `
 
 export const Brand = styled.div`

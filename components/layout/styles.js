@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import media from '../styles/media'
 
 export const Layout = styled.div`
   display: flex;
@@ -7,5 +8,9 @@ export const Layout = styled.div`
 `
 
 export const LayoutContent = styled.div`
-  flex: 1;
+  padding: 1.5em;
+  ${media.tablet`
+    flex: 1;
+    padding: 0;
+  `};
 `

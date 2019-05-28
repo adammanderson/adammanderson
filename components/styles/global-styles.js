@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import media from './media'
 import { regularFont } from './fonts'
 
 const GlobalStyles = createGlobalStyle`
@@ -15,9 +16,12 @@ const GlobalStyles = createGlobalStyle`
 
   body {
     ${regularFont};
-    font-size: 16px;
+    font-size: 15px;
     line-height: 1.5em;
     background: ${props => props.theme.background};
+    ${media.tablet`
+      font-size: 16px;
+    `};
   }
 `
 
