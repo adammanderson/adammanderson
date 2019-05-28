@@ -1,27 +1,15 @@
-import React from 'react'
-import { Link } from 'gatsby'
-import PropTypes from 'prop-types'
-import Walrus from './Walrus'
-
 import {
   HeaderWrapper,
+  HeaderInner,
   Brand,
-  Logo,
 } from './styles'
-import Nav from './Nav'
+import Nav from '../nav'
 
-const Header = () => {
-  return (
-    <HeaderWrapper>
-      <Brand>
-        <Logo>
-          <Walrus />
-        </Logo>
-        adam.
-      </Brand>
+export default () => (
+  <HeaderWrapper>
+    <HeaderInner>
+      <Brand>Adam Anderson</Brand>
       <Nav />
-    </HeaderWrapper>
-  )
-}
-
-export default Header
+    </HeaderInner>
+  </HeaderWrapper>
+)

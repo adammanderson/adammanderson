@@ -14,11 +14,10 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    padding: 0 2em;
     ${regularFont};
-    font-size: 17px;
+    font-size: 16px;
     line-height: 1.5em;
-    background: ${props => props.theme.backgroundDark};
+    background: ${props => props.theme.background};
   }
 `
 

@@ -1,9 +1,7 @@
 import colours from '../colours'
 
 export default {
-  backgroundDark: colours.darkestGrey,
-  backgroundLight: colours.darkerGrey,
+  background: colours.black,
   heading: colours.white,
-  hightlight: colours.gold,
-  body: colours.white,
+  body: colours.grey,
 }

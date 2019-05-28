@@ -1,7 +1,7 @@
 import React from 'react'
 import App, { Container } from 'next/app'
 import { ThemeProvider } from 'styled-components'
-import { Layout, LayoutContent } from '../components/layout'
+import Layout from '../components/layout'
 import GlobalStyles from '../components/styles/global-styles'
 import { darkTheme } from '../components/styles/themes'
 

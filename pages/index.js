@@ -1,21 +1,10 @@
 import React, { Fragment } from 'react'
 import Head from 'next/head'
-import SplitText from 'react-pose-text'
 import Cover from '../components/cover'
 import {
   BigHeading,
   P,
-  Highlight,
 } from '../components/typography'
-
-const charPoses = {
-  exit: { opacity: 0, x: 90 },
-  enter: {
-    opacity: 1,
-    x: 0,
-    delay: ({ charIndex }) => charIndex * 100,
-  },
-};
 
 const IndexPage = () => (
   <Fragment>
@@ -23,13 +12,17 @@ const IndexPage = () => (
       <title>Adam Anderson | Front-end Developer, London</title>
     </Head>
     <Cover>
-      <BigHeading><SplitText initialPose="exit" pose="enter" charPoses={charPoses}>Adam.</SplitText></BigHeading>
+      <BigHeading>
+        Frontend Developer and UX Designer.
+        <br />
+        Over 8 years experience crafting interfaces.
+        <br />
+        Run on React, Node, Sketch, Coffee.
+        <br />
+        Living in London.
+      </BigHeading>
       <P>
-        I’m a front-end developer based in London, currently coding at the
-        <Highlight> Royal Opera House, Covent Garden</Highlight>
-        . With more than 8 years’ experience I
-        specialise in crafting intuitive interfaces, interaction design and UX.
-        I run on React, ES6, Node, SCSS, Sketch and filter coffee.
+        I currently code at the Royal Opera House, Covent Garden.
       </P>
     </Cover>
   </Fragment>
