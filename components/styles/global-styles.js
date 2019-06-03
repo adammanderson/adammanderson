@@ -17,7 +17,7 @@ const GlobalStyles = createGlobalStyle`
   body {
     ${regularFont};
     font-size: 16px;
-    line-height: 1.5em;
+    line-height: 1.4em;
     background: ${props => props.theme.background};
   }
 `

@@ -25,7 +25,7 @@ export const HeavyHeading = styled.h3`
   ${blackFont};
   margin: 0 0 0.6em 0;
   color: ${props => props.theme.heading};
-  font-size: 1.2em;
+  font-size: 1.3em;
   &:after {
     position: absolute;
     left: 0;
