@@ -14,3 +14,8 @@ export const boldItalicFont = `
   ${boldFont};
   font-style: italic;
 `
+
+export const blackFont = `
+  ${fontFamily};
+  font-weight: 700;
+`

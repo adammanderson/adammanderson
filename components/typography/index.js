@@ -1,5 +1,6 @@
 export {
   BigHeading,
+  HeavyHeading,
   MediumHeading,
   SmallHeading,
 } from './headings'

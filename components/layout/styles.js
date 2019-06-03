@@ -13,4 +13,7 @@ export const LayoutContent = styled.div`
     flex: 1;
     padding: 0;
   `};
+  ${media.desktop`
+    padding: 0 10em 0 0;
+  `};
 `
