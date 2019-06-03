@@ -9,7 +9,9 @@ export const HeaderWrapper = styled.section`
   align-self: flex-start;
   display: flex;
   align-items: center;
-  min-height: 100vh;
+  ${media.tablet`
+    min-height: 100vh;
+  `};
 `
 
 export const HeaderInner = styled.div`

@@ -1,10 +1,14 @@
 import styled from 'styled-components'
+import media from '../styles/media'
 
 export const NavWrapper = styled.section`
-  flex: 1;
-  display: flex;
-  flex-flow: column wrap;
-  margin: 1em 0;
+  display: none;
+  ${media.tablet`
+    flex: 1;
+    display: flex;
+    flex-flow: column wrap;
+    margin: 1em 0;
+  `};
 `
 
 export const NavItem = styled.a`
