@@ -1,12 +1,5 @@
 {
   "version": 2,
   "alias": "www.adamanderson.co.uk",
-  "routes": [
-    {
-      "src": "/(.*)",
-      "status": 301,
-      "headers": { "Location": "https://adamanderson.co.uk/$1" }
-    }
-  ],
   "builds": [{ "src": "next.config.js", "use": "@now/next" }]
 }

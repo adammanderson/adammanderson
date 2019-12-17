@@ -1,47 +1,47 @@
 import * as React from 'react';
 import { GridWrapper, GridItem } from './styles';
-import { P, MediumHeading, HeavyHeading } from '../typography';
+import { Paragraph, MediumHeading, BigHeading } from '../typography';
 
 export default (): React.ReactElement => (
   <GridWrapper>
     <GridItem>
-      <HeavyHeading>Articles</HeavyHeading>
+      <BigHeading>Articles</BigHeading>
     </GridItem>
     <GridItem>
       <MediumHeading>Deployment with now.sh</MediumHeading>
-      <P>
+      <Paragraph>
         A reducer is a pure function that takes the previous state and
         an action as arguments and returns a new state.
-      </P>
+      </Paragraph>
     </GridItem>
     <GridItem>
       <MediumHeading>Craft Animations in React</MediumHeading>
-      <P>
+      <Paragraph>
         A reducer is a pure function that takes the previous state and
         an action as arguments and returns a new state.
-      </P>
+      </Paragraph>
     </GridItem>
     <GridItem>
       <MediumHeading>Code Splitting with React Suspense</MediumHeading>
-      <P>
+      <Paragraph>
         React.Suspense, along with React.lazy(), introduced in v16.6,
         adds new functionality that allows components to wait for
         something before actually rendering.
-      </P>
+      </Paragraph>
     </GridItem>
     <GridItem>
       <MediumHeading>Deployment with now.sh</MediumHeading>
-      <P>
+      <Paragraph>
         A reducer is a pure function that takes the previous state and
         an action as arguments and returns a new state.
-      </P>
+      </Paragraph>
     </GridItem>
     <GridItem>
       <MediumHeading>Craft Animations in React</MediumHeading>
-      <P>
+      <Paragraph>
         A reducer is a pure function that takes the previous state
         and an action as arguments and returns a new state.
-      </P>
+      </Paragraph>
     </GridItem>
   </GridWrapper>
 )
