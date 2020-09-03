@@ -1,8 +1,8 @@
 import * as React from 'react';
 import App from 'next/app';
 import Head from 'next/head';
-import Layout from '../src/components/layout';
-import ThemeProvider from '../src/utils/ThemeProvider';
+import Layout from '../components/layout';
+import ThemeProvider from '../utils/ThemeProvider';
 
 class AdamApp extends App {
   render(): React.ReactElement {

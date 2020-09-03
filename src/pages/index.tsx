@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Head from 'next/head';
-import Cover from '../src/components/cover';
+import Cover from '../components/cover';
 
 const IndexPage = (): React.ReactElement => (
   <>
