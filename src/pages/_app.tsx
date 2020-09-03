@@ -1,25 +1,20 @@
 import * as React from 'react';
-import App from 'next/app';
+import type { AppProps } from 'next/app';
 import Head from 'next/head';
-import Layout from '../components/layout';
-import ThemeProvider from '../utils/ThemeProvider';
+import Shell from '@components/Shell';
 
-class AdamApp extends App {
-  render(): React.ReactElement {
-    const { Component, pageProps } = this.props;
-
-    return (
-      <ThemeProvider>
-        <Layout>
-          <Head>
-            <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
-            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-          </Head>
-          <Component {...pageProps} />
-        </Layout>
-      </ThemeProvider>
-    );
-  }
+export default function Adam({
+  Component,
+  pageProps,
+}: AppProps): React.ReactElement {
+  return (
+    <Shell>
+      <Head>
+        <title>Adam Anderson. Lead Frontend Developer & Mentor</title>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
+      <Component {...pageProps} />
+    </Shell>
+  );
 }
-
-export default AdamApp;
