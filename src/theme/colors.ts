@@ -1,8 +1,14 @@
 export default {
-  text: '#3A3A40',
-  heading: '#1C1C1E',
-  background: '#FFFFFF',
-  primary: '#5436FC',
-  accent: '#FAFAFA',
-  muted: '#F3F3F3',
+  text: '#517480',
+  heading: '#101214',
+  background: '#F3F3F3',
+  primary: '#433F53',
+  modes: {
+    dark: {
+      text: '#fff',
+      heading: '#517480',
+      background: '#101214',
+      primary: '#0cf',
+    },
+  },
 };

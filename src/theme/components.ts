@@ -9,20 +9,21 @@ export default {
     },
   },
   text: {
-    tiny: {
-      lineHeight: 'small',
-      color: 'text',
-      fontSize: 0,
+    medium: {
+      fontSize: 2,
+      lineHeight: 'body',
+      mb: 2,
     },
     heading: {
       color: 'heading',
-      textTransform: 'uppercase',
       fontSize: 0,
       mb: 3,
+      textTransform: 'uppercase',
+      letterSpacing: '0.25em',
     },
   },
   container: {
     maxWidth: '1000px',
-    px: [4],
+    px: [2, 4, 6],
   },
 };

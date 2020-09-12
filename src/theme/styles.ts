@@ -7,6 +7,7 @@ export default {
     color: 'text',
     WebkitFontSmoothing: 'antialiased',
     MozOsxFontSmoothing: 'grayscale',
+    transition: 'background 300ms ease-in-out 0s',
   },
   h1: {
     fontSize: 3,

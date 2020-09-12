@@ -1,7 +1,13 @@
 import * as React from 'react';
-import { Container, Flex, ThemeProvider } from 'theme-ui';
-import Header from '@components/Header';
+import {
+  ThemeProvider,
+  Flex,
+  Box,
+  Heading,
+} from 'theme-ui';
+import Social from '@components/Social';
 import theme from '@theme';
+import styles from './styles';
 
 interface ShellProps {
   children: React.ReactNode;
@@ -12,11 +18,17 @@ export default function Shell({
 }: ShellProps): React.ReactElement {
   return (
     <ThemeProvider theme={theme}>
-      <Flex>
-        <Header />
-        <Container>
+      <Flex sx={styles.wrapper}>
+        <Flex sx={styles.blurb}>
+          <Heading>Frontend Lead. UX Designer. Mentor.</Heading>
+        </Flex>
+        <Box sx={{ flex: 1 }}>
+          <Flex sx={styles.header}>
+            <Heading as="h1">Adam Anderson</Heading>
+          </Flex>
           {children}
-        </Container>
+        </Box>
+        <Social />
       </Flex>
     </ThemeProvider>
   );
