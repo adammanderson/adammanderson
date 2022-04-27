@@ -1,6 +1,6 @@
-### Hi there 👋
+### Good day 👋
 
-I'm a Lead Frontend Developer and UX Designer.  
-I've been crafting intuitive interfaces for over 12 years.  
-I work with ReactJS, GraphQL, TypeScript, Node, Figma.  
+Lead Frontend Developer and UX Designer.  
+Crafting intuitive interfaces and apps for years.  
+ReactJS, Angular, Native, GraphQL, TypeScript, Node, Figma.  
 Based in the UK. Remote-ready.
