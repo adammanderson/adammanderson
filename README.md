@@ -1,6 +1,4 @@
 ### Good day 👋
 
-Lead Frontend Developer and UX Designer.  
-Crafting intuitive interfaces and apps for years.  
-ReactJS, Angular, Native, GraphQL, TypeScript, Node, Figma.  
-Based in the UK. Remote-ready.
+Full-stack dev and lead based in the UK.
+Node | Next | React18/RSC | TypeScript | GraphQL | Rust | Schema | TDD/BDD | Design systems.
